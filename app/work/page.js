@@ -3,7 +3,7 @@ import ProjectCard from "../components/ProjectCard";
 import GeneratePassImg from "../../public/GeneratePassword.png";
 import NotesWebImg from "../../public/NotesWeb.png";
 
-const page = () => {
+const Work = () => {
   return (
     <div className="flex justify-center items-center">
       <div className="min-h-screen container py-6 md:py-20">
@@ -19,4 +19,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Work;

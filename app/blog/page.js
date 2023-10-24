@@ -1,10 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import postService from "../api/post-service";
-import Image from "next/image";
 import Link from "next/link";
 
-const page = () => {
+const Blog = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const fetchPostData = async () => {
@@ -81,4 +80,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Blog;

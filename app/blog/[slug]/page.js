@@ -11,7 +11,7 @@ async function fetchPostDataBySlug(slug) {
   }
 }
 
-const page = async ({ params }) => {
+const BlogSlug = async ({ params }) => {
   const postData = await fetchPostDataBySlug(params.slug);
 
   return (
@@ -23,4 +23,4 @@ const page = async ({ params }) => {
   );
 };
 
-export default page;
+export default BlogSlug;

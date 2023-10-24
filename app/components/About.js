@@ -15,8 +15,8 @@ const About = () => {
       <div className="lg:px-48 md:px-24 p-8  h-full flex flex-col gap-4">
         <p className="text-xl font-semibold">About</p>
         <p className="text-lg text-muted-foreground">
-          "A skilled software developer and devops professional based in Mumbai
-          , with over <span className="text-white font-semibold">2+ years</span>{" "}
+          A skilled software developer and devops professional based in Mumbai ,
+          with over <span className="text-white font-semibold">2+ years</span>{" "}
           of experience in the field. I am currently a part of the dynamic team
           at TCS where I have been able to work on diverse projects and gain
           valuable industry insights.
@@ -29,7 +29,7 @@ const About = () => {
           <br></br>I am eager to share my past projects and experiences through
           this portfolio, and I hope it will provide you with a glimpse into my
           skills and passion for software development and devops. Thank you for
-          visiting my website!"
+          visiting my website!
         </p>
         <div className="flex justify-center">
           <marquee className=" p-2  rounded-2xl">
