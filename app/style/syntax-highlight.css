@@ -1,0 +1,216 @@
+/*
+Name: Duotone Dark
+Author: Simurai, adapted from DuoTone themes for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
+
+Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-evening-dark.css)
+Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
+*/
+
+@import "../../app/globals.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300");
+/**
+* xonokai theme for JavaScript, CSS and HTML
+* based on: https://github.com/MoOx/sass-prism-theme-base by Maxime Thirouin ~ MoOx --> http://moox.fr/ , which is Loosely based on Monokai textmate theme by http://www.monokai.nl/
+* license: MIT; http://moox.mit-license.org/
+*/
+code[class*="language-"],
+pre[class*="language-"] {
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: normal;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Roboto mono", monospace;
+  color: hsl(var(--foreground));
+  text-shadow: none;
+}
+
+pre > code[class*="language-"] {
+  font-size: 1em;
+}
+
+pre[class*="language-"],
+:not(pre) > code[class*="language-"] {
+  background: transparent;
+}
+
+pre[class*="language-"] {
+  padding: 15px;
+  border-radius: 0px 0px 7px 7px;
+  overflow: auto;
+  border: 2px solid hsl(var(--muted));
+  position: relative;
+  margin: 0;
+}
+
+pre[class*="language-"] code {
+  white-space: pre;
+  display: block;
+}
+
+:not(pre) > code[class*="language-"] {
+  padding: 0.15em 0.2em 0.05em;
+  border-radius: 0.3em;
+  border: 0.13em solid #7a6652;
+  box-shadow: 1px 1px 0.3em -0.1em #000 inset;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6f705e;
+}
+
+.token.operator,
+.token.boolean,
+.token.number {
+  color: #a77afe;
+}
+
+.token.attr-name,
+.token.string {
+  color: #e6d06c;
+}
+
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #e6d06c;
+}
+
+.token.selector,
+.token.inserted,
+.token.tag {
+  color: #a6e22d;
+}
+
+.token.class-name {
+  color: #687eff;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.important,
+.token.deleted {
+  color: #ef3b7d;
+}
+
+.token.regex,
+.token.statement {
+  color: #76d9e6;
+}
+
+.token.placeholder,
+.token.variable {
+  color: #fff;
+}
+
+.token.function {
+  color: hsla(274, 71%, 43%, 1);
+}
+
+.token.important,
+.token.statement,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.punctuation {
+  color: hsl(var(--muted-foreground));
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+code.language-markup {
+  color: #f9f9f9;
+}
+
+code.language-markup .token.tag {
+  color: hsla(133, 50%, 32%, 1);
+}
+
+code.language-markup .token.attr-name {
+  color: #a6e22d;
+}
+
+code.language-markup .token.attr-value {
+  color: #e6d06c;
+}
+
+code.language-markup .token.style,
+code.language-markup .token.script {
+  color: #76d9e6;
+}
+
+code.language-markup .token.script .token.keyword {
+  color: #76d9e6;
+}
+
+/* Line highlight plugin */
+.line-highlight.line-highlight {
+  padding: 0;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.line-highlight.line-highlight:before,
+.line-highlight.line-highlight[data-end]:after {
+  padding: 0.2em 0.5em;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: black;
+  height: 1em;
+  line-height: 1em;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+.code-highlight {
+  float: left; /* 1 */
+  min-width: 100%; /* 2 */
+}
+
+.line-number::before {
+  display: inline-block;
+  width: 1rem;
+  text-align: right;
+  margin-right: 16px;
+  margin-left: -8px;
+  color: rgb(156, 163, 175); /* Line number color */
+  content: attr(line);
+}
+
+.highlight-line {
+  min-width: 100%;
+  padding: 4px;
+  margin-left: -5px;
+  background-color: rgba(59, 130, 246, 0.2); /* Set highlight bg color */
+  border-left: 3px solid rgb(59, 130, 246); /* Set highlight accent border color */
+  font-weight: 600;
+}
+
+.rehype-code-title {
+  border-radius: 7px 7px 0px 0px;
+  border-top: 2px solid hsl(var(--muted));
+  border-right: 2px solid hsl(var(--muted));
+  border-left: 2px solid hsl(var(--muted));
+  padding: 10px;
+  font-family: "Roboto mono", monospace;
+}
