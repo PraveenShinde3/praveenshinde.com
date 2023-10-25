@@ -31,6 +31,11 @@ pre[class*="language-"] {
   color: hsl(var(--foreground));
   text-shadow: none;
 }
+@media screen and (max-width: 600px) {
+  pre[class*="language-"] {
+    width: calc(100vw - 40px);
+  }
+}
 
 pre > code[class*="language-"] {
   font-size: 1em;

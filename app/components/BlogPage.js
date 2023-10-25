@@ -21,7 +21,6 @@ const BlogPage = ({ source }) => {
           <BsArrowBarLeft /> Back
         </p>
       </Link>
-
       <MDXRemote source={source} options={options} />
     </div>
   );
