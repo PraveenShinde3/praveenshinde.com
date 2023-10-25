@@ -66,7 +66,7 @@ module.exports = {
               "a code": { color: theme("colors.foreground") },
               pre: {
                 color: theme("colors.foreground"),
-                backgroundColor: theme("colors.muted"),
+                backgroundColor: "transparent",
               },
               thead: {
                 color: theme("colors.foreground"),
