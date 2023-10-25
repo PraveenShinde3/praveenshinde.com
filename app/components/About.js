@@ -47,7 +47,7 @@ const About = () => {
         </div>
         <div className="py-16 ">
           <p className="font-semibold text-xl">Experience</p>
-          <div className="text-lg py-4">
+          <div className=" text-base py-4">
             <div>Developer</div>
             <div className="text-muted-foreground font-semibold flex flex-col sm:flex-row sm:items-center justify-between">
               <p>@ TCS</p>

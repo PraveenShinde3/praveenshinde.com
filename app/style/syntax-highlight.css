@@ -60,6 +60,16 @@ pre[class*="language-"] code {
   display: block;
 }
 
+p > code {
+  background-color: hsl(var(--muted));
+  padding: 4px 6px 4px 6px;
+  border-radius: 5px;
+  border: 2px solid hsl(var(--muted));
+}
+p > code::after {
+  content: none;
+}
+
 :not(pre) > code[class*="language-"] {
   padding: 0.15em 0.2em 0.05em;
   border-radius: 0.3em;

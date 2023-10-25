@@ -47,18 +47,11 @@ const Blog = () => {
                       style={{
                         backgroundImage: `url(${item.image.url})`,
                       }}
-                    >
-                      {/* <img
-                        src={item.image.url}
-                        alt="Image"
-                        width={600}
-                        className="object-fill rounded "
-                      /> */}
-                    </div>
+                    ></div>
                     <div className="md:w-2/3 flex flex-col justify-between">
                       <div>
                         <p>{item.title}</p>
-                        <p className="text-[12px] py-1 text-muted-foreground">
+                        <p className=" text-sm py-1 text-muted-foreground">
                           {item.description}
                         </p>
                       </div>
