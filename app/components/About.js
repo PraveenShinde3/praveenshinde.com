@@ -31,7 +31,7 @@ const About = () => {
           skills and passion for software development and devops. Thank you for
           visiting my website!
         </p>
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <marquee className=" p-2  rounded-2xl">
             <div className="flex gap-2 text-xl items-center">
               <FaReact /> React Js
@@ -44,7 +44,7 @@ const About = () => {
               <SiMysql /> MySql
             </div>
           </marquee>
-        </div>
+        </div> */}
         <div className="py-16 ">
           <p className="font-semibold text-xl">Experience</p>
           <div className=" text-base py-4">

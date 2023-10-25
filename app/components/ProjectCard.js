@@ -8,7 +8,7 @@ const ProjectCard = ({ ImageSrc }) => {
       <div className="rounded-xl overflow-hidden">
         <Image width={"100%"} src={ImageSrc} />
       </div>
-      <div className="py-2 md:max-w-1/3 md:w-2/3 flex flex-col justify-between">
+      <div className="py-2 md:w-11/12 flex flex-col justify-between">
         <div className="flex flex-col gap-4">
           <p className="sm:text-3xl md:text-4xl text-2xl font-semibold">
             <span className="text-muted-foreground">01.</span>Random Password

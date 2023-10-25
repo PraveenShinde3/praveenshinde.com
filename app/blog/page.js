@@ -43,7 +43,7 @@ const Blog = () => {
                 >
                   <div className="flex flex-col md:flex-row gap-4 w-full">
                     <div
-                      className="rounded-xl md:w-1/3 bg-cover bg-left h-64 md:h-32 overflow-hidden border-2 border-muted"
+                      className="rounded-xl md:w-1/3 bg-cover bg-left h-40 md:h-32 overflow-hidden border-2 border-muted"
                       style={{
                         backgroundImage: `url(${item.image.url})`,
                       }}
