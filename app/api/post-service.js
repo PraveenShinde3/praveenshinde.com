@@ -42,6 +42,10 @@ class PostService {
           tags
           title
           updatedAt
+          image {
+            id
+            url
+          }
         }
       }
     `;
