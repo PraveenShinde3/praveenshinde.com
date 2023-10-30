@@ -27,7 +27,7 @@ const BlogPage = ({ source, data }) => {
 
       <div>
         <p className="text-foreground text-2xl font-bold">{data.title}</p>
-        <p className="text-[0.8rem] -mt-4 border-b-2 pb-2 border-muted font-bold flex gap-2 items-center">
+        <p className="text-[0.8rem] -mt-4  pb-2  font-bold flex gap-2 items-center">
           <BsCalendar3 />
           {formatDate(data.createdAt)}
         </p>

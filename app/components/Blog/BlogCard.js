@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import formatDate from "../../utils/Blog/dateFormatter";
 
 const BlogCard = ({ item }) => {
   return (
@@ -18,7 +19,7 @@ const BlogCard = ({ item }) => {
           </p>
         </div>
         <div className="text-[12px] text-muted-foreground flex justify-between">
-          <p>{item.date}</p>
+          <p>{formatDate(item.date)}</p>
           <Link href={"/blog/" + item.slug}>
             <p className="text-foreground">Read more..</p>
           </Link>

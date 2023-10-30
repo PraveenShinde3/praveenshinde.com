@@ -100,3 +100,23 @@ body {
     background-color: rgba(152, 128, 255, 0.2);
   }
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
