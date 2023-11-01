@@ -26,7 +26,7 @@ const Blog = () => {
   }, []);
   return (
     <div className={" min-h-screen container py-8 md:py-24 mx-auto"}>
-      <div className="2xl:px-48 xl:px-32 lg:px-12 p-2 pt-12 pb-28 md:pt-0 md:pb-0 h-full flex justify-center items-center">
+      <div className="2xl:px-48 xl:px-32 lg:px-12 p-6 pt-12 pb-28 md:pt-0 md:pb-0 h-full flex justify-center items-center">
         {data.length === 0 ? (
           <LoadingUi />
         ) : (
