@@ -9,8 +9,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { BsCalendar3 } from "react-icons/bs";
 import { AiOutlineRead } from "react-icons/ai";
-import "../../style/syntax-highlight.css";
 import getReadtime from "../../utils/Blog/readTime";
+import "../../style/syntax-highlight.css";
 
 const BlogPage = ({ source, data }) => {
   const options = {
@@ -22,7 +22,7 @@ const BlogPage = ({ source, data }) => {
   return (
     <div className="prose prose-dark">
       <Link href="/blog" className=" no-underline">
-        <p className="flex gap-2 pb-4 items-center">
+        <p className="flex gap-2 py-2 m-0 items-center">
           <BsArrowBarLeft /> Back
         </p>
       </Link>

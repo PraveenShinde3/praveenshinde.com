@@ -13,6 +13,9 @@ Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
 * based on: https://github.com/MoOx/sass-prism-theme-base by Maxime Thirouin ~ MoOx --> http://moox.fr/ , which is Loosely based on Monokai textmate theme by http://www.monokai.nl/
 * license: MIT; http://moox.mit-license.org/
 */
+p {
+  font-size: 0.875rem;
+}
 code[class*="language-"],
 pre[class*="language-"] {
   -moz-tab-size: 2;
@@ -25,7 +28,6 @@ pre[class*="language-"] {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: normal;
-  font-size: 14px;
   font-weight: 400;
   font-family: "Roboto mono", monospace;
   color: hsl(var(--foreground));
