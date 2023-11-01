@@ -8,7 +8,9 @@ import formatDate from "../../utils/Blog/dateFormatter";
 import Link from "next/link";
 import Image from "next/image";
 import { BsCalendar3 } from "react-icons/bs";
+import { AiOutlineRead } from "react-icons/ai";
 import "../../style/syntax-highlight.css";
+import getReadtime from "../../utils/Blog/readTime";
 
 const BlogPage = ({ source, data }) => {
   const options = {
@@ -26,11 +28,20 @@ const BlogPage = ({ source, data }) => {
       </Link>
 
       <div>
-        <p className="text-foreground text-2xl font-bold">{data.title}</p>
-        <p className="text-[0.8rem] -mt-4  pb-2  font-bold flex gap-2 items-center">
-          <BsCalendar3 />
-          {formatDate(data.createdAt)}
+        <p className="text-foreground text-2xl py-3 m-0 font-bold">
+          {data.title}
         </p>
+        <div className="text-[0.8rem] -mt-4 font-bold flex justify-between">
+          <p className="flex gap-2 items-center">
+            <BsCalendar3 />
+            {formatDate(data.createdAt)}
+          </p>
+          <p className="flex gap-2 items-center">
+            <AiOutlineRead size={"1rem"} />
+            {getReadtime(source)} mins read
+          </p>
+        </div>
+
         <Image
           src={data.image.url}
           width={0}
