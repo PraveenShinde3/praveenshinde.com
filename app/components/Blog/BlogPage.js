@@ -7,8 +7,6 @@ import rehypeCodeTitles from "rehype-code-titles";
 import formatDate from "../../utils/Blog/dateFormatter";
 import Link from "next/link";
 import Image from "next/image";
-import { BsCalendar3 } from "react-icons/bs";
-import { AiOutlineRead } from "react-icons/ai";
 import getReadtime from "../../utils/Blog/readTime";
 import "../../style/syntax-highlight.css";
 
@@ -31,15 +29,11 @@ const BlogPage = ({ source, data }) => {
         <p className="text-foreground text-2xl py-3 m-0 font-bold">
           {data.title}
         </p>
-        <div className="text-[0.8rem] -mt-4 font-bold flex justify-between">
-          <p className="flex gap-2 items-center">
-            <BsCalendar3 />
-            {formatDate(data.createdAt)}
+        <div className=" -mt-4 font-bold flex justify-between">
+          <p className="flex gap-2 text-xs items-center">
+            {formatDate(data.createdAt)} | {getReadtime(source)} mins read
           </p>
-          <p className="flex gap-2 items-center">
-            <AiOutlineRead size={"1rem"} />
-            {getReadtime(source)} mins read
-          </p>
+          <p className="text-xs">{data.views} views</p>
         </div>
 
         <Image

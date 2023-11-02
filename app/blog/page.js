@@ -22,6 +22,7 @@ const Blog = () => {
         console.log(error);
       }
     };
+
     fetchPostData();
   }, []);
   return (

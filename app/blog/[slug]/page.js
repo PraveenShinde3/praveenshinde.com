@@ -11,7 +11,16 @@ const plus_jakarta_sans = Plus_Jakarta_Sans({
 async function fetchPostDataBySlug(slug) {
   try {
     const response = await postService.getPostBySlug(slug);
+    await updateBlogView(response.posts[0].views, slug);
     return response.posts[0];
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function updateBlogView(slug, views) {
+  try {
+    await postService.updateViews(slug, views);
   } catch (error) {
     console.log(error);
   }
@@ -22,9 +31,7 @@ const BlogSlug = async ({ params }) => {
   return (
     <div className={" container py-8  mx-auto"}>
       <div className=" xl:px-32 lg:px-12 p-6 h-full flex flex-col justify-center items-center">
-        {postData.content && (
-          <BlogPage source={postData.content} data={postData} />
-        )}
+        {postData && <BlogPage source={postData.content} data={postData} />}
       </div>
     </div>
   );

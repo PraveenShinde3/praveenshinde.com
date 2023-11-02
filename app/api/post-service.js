@@ -1,10 +1,15 @@
 import { GraphQLClient, gql } from "graphql-request";
+import "dotenv/config";
 
 class PostService {
   constructor() {
-    this.endpoint =
-      "https://api-ap-south-1.hygraph.com/v2/clnuals6y0mro01udb4yp7g1v/master";
-    this.graphQlClient = new GraphQLClient(this.endpoint);
+    this.endpoint = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
+    this.graphQlClient = new GraphQLClient(this.endpoint, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_GRAPHCMS_TOKEN}`,
+      },
+    });
   }
 
   async getAllPosts() {
@@ -19,6 +24,7 @@ class PostService {
           title
           updatedAt
           description
+          views
           image {
             id
             url
@@ -42,6 +48,7 @@ class PostService {
           tags
           title
           updatedAt
+          views
           image {
             id
             url
@@ -51,6 +58,25 @@ class PostService {
     `;
     const variable = {
       slug: slug,
+    };
+    return await this.graphQlClient.request(query, variable);
+  }
+
+  async updateViews(views, slug) {
+    const query = gql`
+      mutation updateThePost($slug: String!, $views: Int) {
+        updatePost(where: { slug: $slug }, data: { views: $views }) {
+          views
+        }
+        publishPost(where: { slug: $slug }, to: [PUBLISHED]) {
+          slug
+        }
+      }
+    `;
+    const latestView = views + 1;
+    const variable = {
+      slug: slug,
+      views: latestView,
     };
     return await this.graphQlClient.request(query, variable);
   }
