@@ -2,6 +2,7 @@ import React from "react";
 import postService from "../../api/post-service";
 import BlogPage from "../../components/Blog/BlogPage";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import "dotenv/config";
 
 const plus_jakarta_sans = Plus_Jakarta_Sans({
   weight: ["400", "700"],
@@ -11,7 +12,10 @@ const plus_jakarta_sans = Plus_Jakarta_Sans({
 async function fetchPostDataBySlug(slug) {
   try {
     const response = await postService.getPostBySlug(slug);
-    await updateBlogView(response.posts[0].views, slug);
+    if (
+      process.env.NEXT_PUBLIC_ENV == "Prod" &&
+      (await updateBlogView(response.posts[0].views, slug))
+    );
     return response.posts[0];
   } catch (error) {
     console.log(error);
