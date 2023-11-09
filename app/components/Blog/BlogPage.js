@@ -9,6 +9,7 @@ import Link from "next/link";
 import Image from "next/image";
 import getReadtime from "../../utils/Blog/readTime";
 import "../../style/syntax-highlight.css";
+import "../../style/blog-style.css";
 
 const BlogPage = ({ source, data }) => {
   const options = {
