@@ -16,9 +16,10 @@ const About = () => {
         <p className="text-xl font-semibold">About</p>
         <p className="text-lg text-muted-foreground">
           A skilled software developer and devops professional based in Mumbai ,
-          with over <span className="text-white font-semibold">2+ years</span>{" "}
-          of experience in the field. I am currently a part of the dynamic team
-          at TCS where I have been able to work on diverse projects and gain
+          with over{" "}
+          <span className="text-foreground font-semibold">2+ years</span> of
+          experience in the field. I am currently a part of the dynamic team at
+          TCS where I have been able to work on diverse projects and gain
           valuable industry insights.
           <br></br>
           <br></br>My expertise in various programming languages and development
@@ -31,20 +32,7 @@ const About = () => {
           skills and passion for software development and devops. Thank you for
           visiting my website!
         </p>
-        {/* <div className="flex justify-center">
-          <marquee className=" p-2  rounded-2xl">
-            <div className="flex gap-2 text-xl items-center">
-              <FaReact /> React Js
-              <SiNextdotjs /> Next Js
-              <SiSpring /> SpringBoot
-              <TbBrandNodejs /> Node Js
-              <FaJava /> Java
-              <SiJavascript /> JavaScript
-              <SiMongodb /> MongoDB
-              <SiMysql /> MySql
-            </div>
-          </marquee>
-        </div> */}
+
         <div className="py-16 ">
           <p className="font-semibold text-xl">Experience</p>
           <div className=" text-base py-4">
