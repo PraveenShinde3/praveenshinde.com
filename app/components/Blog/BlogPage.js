@@ -28,13 +28,13 @@ const BlogPage = ({ source, data }) => {
 
       <div>
         <p className="text-foreground text-2xl py-3 m-0 font-bold">
-          {data.title}
+          {data?.title}
         </p>
         <div className=" -mt-4 font-bold flex items-center justify-between">
           <p className="flex gap-2 text-xs items-center">
-            {formatDate(data.createdAt)} &#183; {getReadtime(source)} mins read
+            {formatDate(data?.createdAt)} &#183; {getReadtime(source)} mins read
           </p>
-          <p className="text-xs">{data.views} views</p>
+          <p className="text-xs">{data?.views} views</p>
         </div>
 
         <Image
