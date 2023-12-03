@@ -38,7 +38,7 @@ const Blog = () => {
               return (
                 <div
                   key={item.id}
-                  className="hover:scale-105 lg:w-2/3 p-2 border-2 flex flex-col gap-4 justify-between border-muted rounded-2xl"
+                  className="hover:scale-105 lg:w-2/3 bg-card p-2 border-2 flex flex-col gap-4 justify-between border-muted rounded-2xl"
                 >
                   <BlogCard item={item} />
                 </div>

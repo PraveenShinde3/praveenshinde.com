@@ -30,15 +30,15 @@ const BlogPage = ({ source, data }) => {
         <p className="text-foreground text-2xl py-3 m-0 font-bold">
           {data.title}
         </p>
-        <div className=" -mt-4 font-bold flex justify-between">
+        <div className=" -mt-4 font-bold flex items-center justify-between">
           <p className="flex gap-2 text-xs items-center">
-            {formatDate(data.createdAt)} | {getReadtime(source)} mins read
+            {formatDate(data.createdAt)} &#183; {getReadtime(source)} mins read
           </p>
           <p className="text-xs">{data.views} views</p>
         </div>
 
         <Image
-          src={data.image.url}
+          src={data?.image?.url}
           width={0}
           height={0}
           sizes="100vw"
