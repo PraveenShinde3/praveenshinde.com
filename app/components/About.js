@@ -12,7 +12,7 @@ import { TbBrandNodejs } from "react-icons/tb";
 const About = () => {
   return (
     <div className=" min-h-screen container py-4 ">
-      <div className="lg:px-48 md:px-24 p-8  h-full flex flex-col gap-4">
+      <div className=" xl:px-72 lg:px-48 md:px-24 p-8  h-full flex flex-col gap-4">
         <p className="text-xl font-semibold">About</p>
         <p className="text-lg text-muted-foreground">
           A skilled software developer and devops professional based in Mumbai ,

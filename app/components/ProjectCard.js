@@ -14,7 +14,7 @@ const ProjectCard = ({ data }) => {
             <span className="text-muted-foreground">{data.id}.</span>
             {data.projectData.title}
           </p>
-          <p className="text-muted-foreground">{data.projectData.tag}</p>
+
           <p className="text-sm text-muted-foreground">
             {data.projectData.desc}
           </p>

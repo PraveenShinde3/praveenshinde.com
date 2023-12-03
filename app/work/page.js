@@ -32,7 +32,7 @@ const Work = () => {
   return (
     <div className="flex justify-center items-center">
       <div className="min-h-screen container py-6 md:py-20">
-        <div className="2xl:px-48 xl:px-32 lg:px-12 py-10 pb-20 px-6 md:p-1  h-full flex flex-col">
+        <div className="2xl:px-72 xl:px-48 lg:px-12 py-10 pb-20 px-6 md:p-1  h-full flex flex-col">
           <p className="text-xl font-semibold">Work</p>
           <div className="py-1 md:py-4">
             {workData.map((item) => {
