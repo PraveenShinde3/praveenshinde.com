@@ -2,12 +2,14 @@
 import React from "react";
 import Button from "./Button";
 import { LuDownload } from "react-icons/lu";
+import "dotenv/config";
 // import resume from "../utils/data/Resume-PraveenShinde.pdf";
 // import cv from "../../public/Resume-PraveenShinde.pdf";
 
 const Home = () => {
   const handleDownload = () => {
-    const ResumePdfUrl = "http://localhost:3000/Resume-PraveenShinde.pdf"; // Update with the correct path to your PDF file
+    const ResumePdfUrl =
+      process.env.NEXT_PUBLIC_HOSTNAME + "/Resume-PraveenShinde.pdf"; // Update with the correct path to your PDF file
 
     const link = document.createElement("a");
     link.href = ResumePdfUrl;
