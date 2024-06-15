@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import ModeToggle from "./ModeToggle";
+import ModeToggle from "./modeToggle";
 import logo from "../../public/noisy-logo.svg";
 import Link from "next/link";
 
