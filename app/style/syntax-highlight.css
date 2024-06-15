@@ -33,7 +33,7 @@ pre[class*="language-"] {
   color: hsl(var(--foreground));
   text-shadow: none;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 200px) {
   pre[class*="language-"] {
     width: calc(100vw - 40px);
   }

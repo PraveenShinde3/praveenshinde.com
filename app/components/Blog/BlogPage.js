@@ -39,6 +39,17 @@ const BlogPage = ({ source, data }) => {
         <div className="h-[1px] w-full bg-accent"></div>
       </div>
       <MDXRemote source={source} options={options} />
+
+      <div className="py-4">
+        <p className=" py-1  w-fit bg-accent px-4 rounded-full">
+          <Link
+            href="/"
+            className="flex text-[0.85rem] items-center text-muted-foreground hover:text-foreground transition-all ease-in-out duration-200 gap-2 no-underline w-fit "
+          >
+            <BsArrowBarLeft /> Back to home{" "}
+          </Link>
+        </p>
+      </div>
     </div>
   );
 };
