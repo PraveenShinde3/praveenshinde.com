@@ -6,7 +6,7 @@ const About = () => {
     <div className="px-8 pb-12">
       <div>
         <p className="font-bold ">Experience</p>
-        <div className="flex gap-4 py-4 text-[0.85rem]">
+        <div className="flex flex-col gap-2 sm:flex-row sm:gap-4 py-4 text-[0.85rem]">
           <p className="opacity-80 min-w-fit">July, 2021 - Present</p>
           <div>
             <p className="font-medium">

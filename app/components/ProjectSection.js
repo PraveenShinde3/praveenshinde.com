@@ -45,7 +45,7 @@ const ProjectSection = () => {
       <div>
         <p className="font-bold">Projects</p>
       </div>
-      <div className="py-6 grid grid-cols-2 gap-x-14 gap-y-6">
+      <div className="py-6 grid grid-cols-1 sm:grid-cols-2 gap-x-14 gap-y-6">
         {projectData.map((project) => {
           return <ProjectCard data={project} key={project.id} />;
         })}
