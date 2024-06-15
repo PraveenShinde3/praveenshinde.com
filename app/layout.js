@@ -1,13 +1,6 @@
 import "./globals.css";
-import { IBM_Plex_Mono } from "next/font/google";
-import Navbar from "./components/Navbar/Navbar";
 import { ThemeProvider } from "./components/theme-provide";
 import SiteHeader from "./components/SiteHeader";
-
-const ibm_plex_mono = IBM_Plex_Mono({
-  weight: "400",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Praveen Shinde",
@@ -17,13 +10,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={ibm_plex_mono.className}>
+      <body>
         <ThemeProvider attribute="class" defaultTheme="dark">
-          <main className="text-foreground">
-            <SiteHeader />
-            <div className="w-full">
-              <Navbar />
-              {children}
+          <main className="text-foreground flex justify-center">
+            <div className="container tracking-wide px-96">
+              <div className="py-20 px-8 ">
+                <SiteHeader />
+                {children}
+              </div>
             </div>
           </main>
         </ThemeProvider>

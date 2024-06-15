@@ -51,6 +51,7 @@
 
 body {
   font-size: 14px;
+  font-family: "Satoshi", sans-serif;
 }
 
 .dot-flashing {
@@ -119,4 +120,30 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../public/fonts/Satoshi-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../public/fonts/Satoshi-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../public/fonts/Satoshi-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../public/fonts/Satoshi-Black.ttf");
+  font-weight: 800;
+}
+
+::selection {
+  background: #a084e8;
 }

@@ -33,8 +33,8 @@ async function updateBlogView(slug, views) {
 const BlogSlug = async ({ params }) => {
   const postData = await fetchPostDataBySlug(params.slug);
   return (
-    <div className={" container py-8  mx-auto"}>
-      <div className=" xl:px-32 lg:px-12 p-6 h-full flex flex-col justify-center items-center">
+    <div className={" container "}>
+      <div className="px-8">
         {postData && <BlogPage source={postData.content} data={postData} />}
       </div>
     </div>

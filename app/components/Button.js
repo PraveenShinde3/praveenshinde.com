@@ -1,15 +1,17 @@
 import React from "react";
 
-const Button = ({ onClick, text, icon }) => {
+const Button = ({ onClick, text, icon, bold, highlight }) => {
   return (
-    <div className="py-4 px-1">
-      <button
-        onClick={onClick}
-        className="border-2 flex gap-2 items-center border-muted rounded-xl lg:px-8 md:px-6 px-4 py-2 hover:bg-foreground hover:text-primary-foreground"
-      >
-        {text} {icon}
-      </button>
-    </div>
+    <button
+      onClick={onClick ? onClick : () => {}}
+      className={` hover:-translate-y-1 transition-all ease-in-out duration-200 flex gap-2 text-[0.8rem] items-center ${
+        highlight ? "bg-foreground text-background" : "bg-accent  "
+      } ${text ? "px-[15px]" : "px-[10px]"} py-[6px] rounded-full ${
+        bold ? "font-bold" : "opacity-80"
+      }`}
+    >
+      {text} {icon}
+    </button>
   );
 };
 

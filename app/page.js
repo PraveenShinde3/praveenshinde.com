@@ -1,10 +1,14 @@
 import Home from "./components/Home";
 import About from "./components/About";
+import ProjectSection from "./components/ProjectSection";
+import BlogSection from "./components/BlogSection";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col justify-center  items-center">
+    <div >
       <Home />
+      <ProjectSection />
+      <BlogSection />
       <About />
     </div>
   );
