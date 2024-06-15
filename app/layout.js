@@ -1,6 +1,7 @@
 import "./globals.css";
 import { ThemeProvider } from "./components/theme-provide";
 import SiteHeader from "./components/SiteHeader";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Praveen Shinde",
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
             </div>
           </main>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
