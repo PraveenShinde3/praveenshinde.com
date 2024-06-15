@@ -4,7 +4,7 @@ import Button from "./Button";
 import { LuDownload } from "react-icons/lu";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
-
+import Link from "next/link";
 import "dotenv/config";
 import Image from "next/image";
 import logo from "../../public/noisy-logo.svg";
@@ -56,13 +56,26 @@ const Home = () => {
               icon={<LuDownload />}
             />
             <div className="flex gap-2">
-              <Button bold={false} highlight={false} icon={<FaGithub />} />
-              <Button bold={false} highlight={false} icon={<FaLinkedinIn />} />
-              <Button
-                bold={false}
-                highlight={false}
-                icon={<MdAlternateEmail />}
-              />
+              <Link
+                href="mailto:shinde.praveen.dev@gmail.com"
+                className="bg-accent p-2 rounded-full "
+              >
+                <MdAlternateEmail />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/shindepraveen/"
+                target="_blank"
+                className="bg-accent p-2 rounded-full"
+              >
+                <FaLinkedinIn />
+              </Link>
+              <Link
+                href="https://github.com/PraveenShinde3"
+                target="_blank"
+                className="bg-accent p-2 rounded-full"
+              >
+                <FaGithub />
+              </Link>
             </div>
           </div>
         </div>
