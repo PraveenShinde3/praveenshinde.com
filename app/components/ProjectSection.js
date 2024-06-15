@@ -14,7 +14,7 @@ const ProjectSection = () => {
         desc: "Creates secure, random passwords for users to use for their various online accounts and information.Creates secure, random passwords for users to use for their various online accounts and information.",
         tag: "Web Application",
         tech: "Next Js & Supabase",
-        link: "https://generates-random-password.netlify.app/",
+        link: "https://certificatehub.vercel.app/",
       },
     },
     {
@@ -25,7 +25,7 @@ const ProjectSection = () => {
         desc: "Effortlessly store and manage your notes, to-do lists, ideas, and anything else you need to remember, all in one accessible platform.",
         tag: "Web Application",
         tech: "HTML, CSS & JavaScript",
-        link: "https://notes-webapp.pages.dev/",
+        link: "https://generates-random-password.netlify.app/",
       },
     },
     {
