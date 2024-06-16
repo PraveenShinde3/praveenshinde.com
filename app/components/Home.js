@@ -6,11 +6,6 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 import Link from "next/link";
 import "dotenv/config";
-import Image from "next/image";
-import logo from "../../public/noisy-logo.svg";
-// import ModeToggle from "./modeToggle";
-// import resume from "../utils/data/Resume-PraveenShinde.pdf";
-// import cv from "../../public/Resume-PraveenShinde.pdf";
 
 const Home = () => {
   const handleDownload = () => {
@@ -79,14 +74,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-
-        {/* <div className="relative flex-1 mx-auto px-4 md:px-12 lg:px-20 xl:px-48 lg:py-8 md:py-6 py-2 flex flex-col md:gap-4 gap-8 justify-center items-center sm:items-start">
-          <Button
-            onClick={handleDownload}
-            text={"CV Download"}
-            icon={<LuDownload />}
-          />
-        </div> */}
       </div>
     </div>
   );

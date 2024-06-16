@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import ModeToggle from "./modeToggle";
-import logo from "../../public/noisy-logo.svg";
+import logo from "../../public/noisy-logo.png";
 import Link from "next/link";
 
 const SiteHeader = () => {
