@@ -9,8 +9,7 @@ import "dotenv/config";
 
 const Home = () => {
   const handleDownload = () => {
-    const ResumePdfUrl =
-      process.env.NEXT_PUBLIC_HOSTNAME + "/Resume-PraveenShinde.pdf"; // Update with the correct path to your PDF file
+    const ResumePdfUrl = process.env.NEXT_PUBLIC_HOSTNAME + "/Latest_CV.pdf"; // Update with the correct path to your PDF file
 
     const link = document.createElement("a");
     link.href = ResumePdfUrl;
