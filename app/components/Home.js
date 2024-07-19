@@ -29,20 +29,20 @@ const Home = () => {
         </div>
         <div className="pt-12 w-5/6">
           <p className="font-bold">From Visual Concepts to Functional Code</p>
-          <div className="py-4 flex flex-col gap-2 text-zinc-300 tracking-wide">
+          <div className="py-4 flex flex-col gap-2 text-muted-foreground tracking-wide">
             <p>
               Specializing in frontend development with{" "}
-              <span className=" text-white font-mono font-semibold">
+              <span className=" text-foreground font-mono font-semibold">
                 React Js
               </span>{" "}
               and{" "}
-              <span className="text-white font-mono font-semibold">
+              <span className="text-foreground font-mono font-semibold">
                 Next.js
               </span>
               . I have a strong passion for creating dynamic and responsive web
               applications. In addition to my frontend skills, I have experience
               in backend development using{" "}
-              <span className="text-white font-mono font-semibold">
+              <span className="text-foreground font-mono font-semibold">
                 Node.js, JavaScript, and Java.
               </span>
             </p>
