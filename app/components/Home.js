@@ -23,22 +23,33 @@ const Home = () => {
         <div>
           <div>
             <p className="font-bold">Praveen Shinde</p>
-            <p className="opacity-70 ">Software Developer & UI Designer</p>
+            <p className="opacity-70 ">Full-stack developer & UI Designer</p>
             <p className="opacity-70 ">Mumbai, India</p>
           </div>
         </div>
         <div className="pt-12 w-5/6">
           <p className="font-bold">From Visual Concepts to Functional Code</p>
-          <div className="py-4 flex flex-col gap-2 tracking-wide">
+          <div className="py-4 flex flex-col gap-2 text-zinc-300 tracking-wide">
             <p>
-              Hello, I&apos;m Praveen, an independent designer and developer
-              specializing in a diverse range of projects, including promotional
-              sites, landing pages, e commerce stores, and member portals.{" "}
+              Specializing in frontend development with{" "}
+              <span className=" text-white font-mono font-semibold">
+                React Js
+              </span>{" "}
+              and{" "}
+              <span className="text-white font-mono font-semibold">
+                Next.js
+              </span>
+              . I have a strong passion for creating dynamic and responsive web
+              applications. In addition to my frontend skills, I have experience
+              in backend development using{" "}
+              <span className="text-white font-mono font-semibold">
+                Node.js, JavaScript, and Java.
+              </span>
             </p>
             <p>
-              Additionally, I collaborate with clients on comprehensive branding
-              initiatives, covering everything from logo and identity design to
-              the development of full brand guidelines and strategies.
+              Alongside my development skills, I also have experience in UI
+              design using Figma, which allows me to create visually appealing
+              and user-friendly interfaces.
             </p>
           </div>
           <div className="pt-3 flex gap-4">
