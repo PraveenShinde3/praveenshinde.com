@@ -3,11 +3,23 @@ import GeneratePassImg from "../../public/GeneratePassword.png";
 import NotesWebImg from "../../public/NotesWeb.png";
 import ProjectCard from "./ProjectCard";
 import CertificateHubThumbnail from "../../public/CertificateHubthum.jpg";
+import SolveAlgoThumbnail from "../../public/solveAlgoThumb.png";
 
 const ProjectSection = () => {
   const projectData = [
     {
       id: "01",
+      imageUrl: SolveAlgoThumbnail,
+      projectData: {
+        title: "SolveAlgo",
+        desc: "Algorithms are the backbone of coding, helping you approach complex challenges with clarity and creativity.",
+        tag: "Web Application",
+        tech: "Next Js ",
+        link: "https://solve-algo.vercel.app/",
+      },
+    },
+    {
+      id: "02",
       imageUrl: CertificateHubThumbnail,
       projectData: {
         title: "Certificate Hub",
@@ -18,7 +30,7 @@ const ProjectSection = () => {
       },
     },
     {
-      id: "02",
+      id: "03",
       imageUrl: GeneratePassImg,
       projectData: {
         title: "Password Generator",
@@ -29,7 +41,7 @@ const ProjectSection = () => {
       },
     },
     {
-      id: "03",
+      id: "04",
       imageUrl: NotesWebImg,
       projectData: {
         title: "Notes Web App",
