@@ -5,11 +5,11 @@ import BlogSection from "./components/BlogSection";
 
 export default function HomePage() {
   return (
-    <div >
+    <div>
       <Home />
+      <About />
       <ProjectSection />
       <BlogSection />
-      <About />
     </div>
   );
 }
