@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import formatDate from "../../utils/Blog/dateFormatter";
 import { Inter } from "next/font/google";
-import { GoArrowUpRight } from "react-icons/go";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +16,6 @@ const BlogCard = ({ item }) => {
           <p className="text-card-foreground group-hover:underline group-hover:underline-offset-4 font-medium">
             {item?.title}
           </p>
-          <GoArrowUpRight className="hidden group-hover:block" />
         </Link>
 
         <p className="text-[0.85rem] text-muted-foreground">{item?.date}</p>
