@@ -61,16 +61,16 @@ export const BlogCardData = [
     views: 18,
     image: null,
   },
-  // {
-  //   date: "2024-07-06",
-  //   id: "clya7kexi0o4m08peznkwat00",
-  //   publishedAt: null,
-  //   slug: "30-days-frontend-designandcoding-challange",
-  //   tags: ['{"Challenges"}'],
-  //   title: "30 Days Frontend Design&Coding Challange",
-  //   updatedAt: "2024-07-06T14:20:25.661358+00:00",
-  //   description: null,
-  //   views: 2,
-  //   image: null,
-  // },
+  {
+    id: "cm2hs35551chn07pin9ya6fe7",
+    createdAt: "2024-10-20T16:04:35.640316+00:00",
+    date: "2024-10-20",
+    description: null,
+    slug: "html-entities-a-guide-to-displaying-special-characters-in-web-pages",
+    tags: ["HTML"],
+    title:
+      "HTML Entities: A Guide to Displaying Special Characters in Web Pages",
+    updatedAt: "2024-10-20T16:32:03.263214+00:00",
+    views: 3,
+  },
 ];

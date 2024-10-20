@@ -5,20 +5,9 @@ import BlogCard from "./Blog/BlogCard";
 import { BlogCardData } from "../utils/data";
 
 const BlogSection = () => {
-  //   const [data, setData] = useState([]);
-  //   useEffect(() => {
-  //     const fetchPostData = async () => {
-  //       try {
-  //         const response = await postService.getAllPosts();
-  //         console.log(response.posts);
-  //         setData(response.posts);
-  //       } catch (error) {
-  //         console.log(error);
-  //       }
-  //     };
-  //     fetchPostData();
-  //     // eslint-disable-next-line react-hooks/exhaustive-deps
-  //   }, []);
+  const sortedBlogCardData = BlogCardData.sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  );
 
   return (
     <div className="px-8 pb-12">
@@ -26,8 +15,8 @@ const BlogSection = () => {
         <p className="font-bold">Writings</p>
       </div>
       <div className="py-3">
-        {BlogCardData.map((item) => {
-          return <BlogCard key={item?.id} item={item} />;
+        {sortedBlogCardData.map((item, index) => {
+          return <BlogCard key={item?.id} item={item} index={index} />;
         })}
       </div>
     </div>
