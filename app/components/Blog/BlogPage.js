@@ -6,10 +6,10 @@ import rehypePrism from "rehype-prism-plus";
 import rehypeCodeTitles from "rehype-code-titles";
 import formatDate from "../../utils/Blog/dateFormatter";
 import Link from "next/link";
-import Image from "next/image";
 import getReadtime from "../../utils/Blog/readTime";
 import "../../style/syntax-highlight.css";
 import "../../style/blog-style.css";
+import { Table, THead, TBody, Tr, Th, Td } from "./MdxComponent";
 
 const BlogPage = ({ source, data }) => {
   const options = {
@@ -17,6 +17,14 @@ const BlogPage = ({ source, data }) => {
       remarkPlugins: [],
       rehypePlugins: [rehypeCodeTitles, rehypePrism],
     },
+  };
+  const components = {
+    table: Table,
+    thead: THead,
+    tbody: TBody,
+    tr: Tr,
+    th: Th,
+    td: Td,
   };
   return (
     <div className="prose prose-dark">

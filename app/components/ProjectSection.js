@@ -1,25 +1,49 @@
 import React from "react";
 import GeneratePassImg from "../../public/GeneratePassword.png";
-import NotesWebImg from "../../public/NotesWeb.png";
+// import NotesWebImg from "../../public/NotesWeb.png";
 import ProjectCard from "./ProjectCard";
 import CertificateHubThumbnail from "../../public/CertificateHubthum.jpg";
 import SolveAlgoThumbnail from "../../public/solveAlgoThumb.png";
+import TailwindAnimationThumbnail from "../../public/tailwind-animations.png";
+import DesignDexThumbnail from "../../public/DesignDexThumbnail.png";
 
 const ProjectSection = () => {
   const projectData = [
     {
       id: "01",
+      imageUrl: TailwindAnimationThumbnail,
+      projectData: {
+        title: "Tailwind CSS Animations",
+        desc: "collection of beautifully crafted, lightweight animations built entirely using Tailwind CSS",
+        tag: "Web Application",
+        tech: "Next Js",
+        link: "https://tailwind-css-animations.vercel.app/",
+      },
+    },
+    {
+      id: "02",
+      imageUrl: DesignDexThumbnail,
+      projectData: {
+        title: "DesignDex",
+        desc: "Unlock a world of design possibilities with our curated collection of resources, tools, and inspiration.",
+        tag: "Web Application",
+        tech: "Next Js, Supabase",
+        link: "https://designdex.vercel.app/",
+      },
+    },
+    {
+      id: "03",
       imageUrl: SolveAlgoThumbnail,
       projectData: {
         title: "SolveAlgo",
         desc: "Algorithms are the backbone of coding, helping you approach complex challenges with clarity and creativity.",
         tag: "Web Application",
-        tech: "Next Js ",
+        tech: "Next Js",
         link: "https://solve-algo.vercel.app/",
       },
     },
     {
-      id: "02",
+      id: "04",
       imageUrl: CertificateHubThumbnail,
       projectData: {
         title: "Certificate Hub",
@@ -29,28 +53,28 @@ const ProjectSection = () => {
         link: "https://certificatehub.vercel.app/",
       },
     },
-    {
-      id: "03",
-      imageUrl: GeneratePassImg,
-      projectData: {
-        title: "Password Generator",
-        desc: "Effortlessly store and manage your notes, to-do lists, ideas, and anything else you need to remember, all in one accessible platform.",
-        tag: "Web Application",
-        tech: "HTML, CSS & JavaScript",
-        link: "https://generates-random-password.netlify.app/",
-      },
-    },
-    {
-      id: "04",
-      imageUrl: NotesWebImg,
-      projectData: {
-        title: "Notes Web App",
-        desc: "Effortlessly store and manage your notes, to-do lists, ideas, and anything else you need to remember, all in one accessible platform.",
-        tag: "Web Application",
-        tech: "React js, Tailwind css",
-        link: "https://notes-webapp.pages.dev/",
-      },
-    },
+    // {
+    //   id: "05",
+    //   imageUrl: GeneratePassImg,
+    //   projectData: {
+    //     title: "Password Generator",
+    //     desc: "Effortlessly store and manage your notes, to-do lists, ideas, and anything else you need to remember, all in one accessible platform.",
+    //     tag: "Web Application",
+    //     tech: "HTML, CSS & JavaScript",
+    //     link: "https://generates-random-password.netlify.app/",
+    //   },
+    // },
+    // {
+    //   id: "06",
+    //   imageUrl: NotesWebImg,
+    //   projectData: {
+    //     title: "Notes Web App",
+    //     desc: "Effortlessly store and manage your notes, to-do lists, ideas, and anything else you need to remember, all in one accessible platform.",
+    //     tag: "Web Application",
+    //     tech: "React js, Tailwind css",
+    //     link: "https://notes-webapp.pages.dev/",
+    //   },
+    // },
   ];
   return (
     <div className="px-8 pb-8">

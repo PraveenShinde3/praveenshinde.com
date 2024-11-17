@@ -14,3 +14,28 @@ img {
 h3 {
   font-size: 14px;
 }
+
+/* TableStyles.css */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1em;
+  text-align: left;
+  padding: 30px;
+}
+
+.custom-thead {
+  background-color: #333;
+  color: white;
+}
+
+.custom-th,
+.custom-td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.custom-tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
