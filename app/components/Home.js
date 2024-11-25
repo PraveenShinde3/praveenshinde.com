@@ -3,6 +3,7 @@ import React from "react";
 import Button from "./Button";
 import { LuDownload } from "react-icons/lu";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
 import Link from "next/link";
 import "dotenv/config";
@@ -80,6 +81,13 @@ const Home = () => {
                 className="bg-accent p-2 rounded-full"
               >
                 <FaGithub />
+              </Link>
+              <Link
+                href="https://x.com/praveens_code"
+                target="_blank"
+                className="bg-accent p-2 rounded-full"
+              >
+                <FaXTwitter />
               </Link>
             </div>
           </div>
