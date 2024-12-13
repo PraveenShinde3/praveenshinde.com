@@ -14,17 +14,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <title>Praveen Shinde - Portfolio</title>
+        <meta name="title" content="Praveen Shinde - Portfolio" />
         <meta
           name="description"
-          content="Welcome to Praveen Shinde's personal website, showcasing projects, blogs, and achievements."
+          content="Explore the personal projects and achievements of Praveen Shinde."
         />
-        <meta
-          name="keywords"
-          content="Praveen Shinde, portfolio, web development, programming, projects"
-        />
-        <meta name="author" content="Praveen Shinde" />
 
-        {/* Open Graph Metadata */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://metatags.io/" />
         <meta property="og:title" content="Praveen Shinde - Portfolio" />
         <meta
           property="og:description"
@@ -32,26 +29,20 @@ export default function RootLayout({ children }) {
         />
         <meta
           property="og:image"
-          content="https://praveenshinde.com/og-image.jpg"
+          content="https://metatags.io/images/meta-tags.png"
         />
-        <meta property="og:url" content="https://praveenshinde.com" />
-        <meta property="og:type" content="website" />
 
-        {/* Twitter Card Metadata */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Praveen Shinde - Portfolio" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta property="twitter:title" content="Praveen Shinde - Portfolio" />
         <meta
-          name="twitter:description"
-          content="Discover the portfolio and blogs of Praveen Shinde."
+          property="twitter:description"
+          content="Explore the personal projects and achievements of Praveen Shinde."
         />
         <meta
-          name="twitter:image"
-          content="https://praveenshinde.com/twitter-image.jpg"
+          property="twitter:image"
+          content="https://metatags.io/images/meta-tags.png"
         />
-        <meta name="twitter:creator" content="@praveens_code" />
-
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark">
