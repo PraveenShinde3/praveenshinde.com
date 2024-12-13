@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://metatags.io/" />
+        <meta property="og:url" content="https://praveenshinde.com/" />
         <meta property="og:title" content="Praveen Shinde - Portfolio" />
         <meta
           property="og:description"
@@ -29,11 +29,11 @@ export default function RootLayout({ children }) {
         />
         <meta
           property="og:image"
-          content="https://metatags.io/images/meta-tags.png"
+          content="https://res.cloudinary.com/dckc5lez0/image/upload/v1734101206/Portfolio_wckv4i.png"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta property="twitter:url" content="https://x.com/praveens_code" />
         <meta property="twitter:title" content="Praveen Shinde - Portfolio" />
         <meta
           property="twitter:description"
@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
         />
         <meta
           property="twitter:image"
-          content="https://metatags.io/images/meta-tags.png"
+          content="https://res.cloudinary.com/dckc5lez0/image/upload/v1734101309/Frame_49_1_o5mudn.png"
         />
       </Head>
       <body>
