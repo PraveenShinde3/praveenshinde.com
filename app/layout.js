@@ -5,45 +5,53 @@ import { Analytics } from "@vercel/analytics/react";
 import Head from "next/head";
 
 export const metadata = {
-  title: "Praveen Shinde",
-  description: "Praveen Shinde Portfolio Website",
+  title: "Praveen Shinde - Portfolio",
+  description:
+    "Explore the personal projects, achievements, and expertise of Praveen Shinde in web development and UI design.",
+  keywords: [
+    "Praveen Shinde",
+    "Portfolio",
+    "Web Developer",
+    "UI Designer",
+    "Next.js",
+    "React",
+    "Frontend Development",
+    "Tailwind CSS",
+    "Open Source Projects",
+  ],
+  author: "Praveen Shinde",
+  viewport: "width=device-width, initial-scale=1",
+  robots: "index, follow",
+  charset: "UTF-8",
+  openGraph: {
+    type: "website",
+    url: "https://praveenshinde.com/",
+    title: "Praveen Shinde - Portfolio",
+    description:
+      "Explore the personal projects, achievements, and expertise of Praveen Shinde in web development and UI design.",
+    image:
+      "https://res.cloudinary.com/dckc5lez0/image/upload/v1734101206/Portfolio_wckv4i.png",
+    locale: "en_US",
+    site_name: "Praveen Shinde - Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@praveens_code",
+    creator: "@praveens_code",
+    title: "Praveen Shinde - Portfolio",
+    description:
+      "Explore the personal projects, achievements, and expertise of Praveen Shinde in web development and UI design.",
+    image:
+      "https://res.cloudinary.com/dckc5lez0/image/upload/v1734101206/Portfolio_wckv4i.png",
+  },
+  themeColor: "#3178c6", // Adjust based on the site's primary color
+  favicon: "/favicon.ico",
+  canonical: "https://praveenshinde.com/",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <title>Praveen Shinde - Portfolio</title>
-        <meta name="title" content="Praveen Shinde - Portfolio" />
-        <meta
-          name="description"
-          content="Explore the personal projects and achievements of Praveen Shinde."
-        />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://praveenshinde.com/" />
-        <meta property="og:title" content="Praveen Shinde - Portfolio" />
-        <meta
-          property="og:description"
-          content="Explore the personal projects and achievements of Praveen Shinde."
-        />
-        <meta
-          property="og:image"
-          content="https://res.cloudinary.com/dckc5lez0/image/upload/v1734101206/Portfolio_wckv4i.png"
-        />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://x.com/praveens_code" />
-        <meta property="twitter:title" content="Praveen Shinde - Portfolio" />
-        <meta
-          property="twitter:description"
-          content="Explore the personal projects and achievements of Praveen Shinde."
-        />
-        <meta
-          property="twitter:image"
-          content="https://res.cloudinary.com/dckc5lez0/image/upload/v1734101309/Frame_49_1_o5mudn.png"
-        />
-      </Head>
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark">
           <main className="text-foreground flex justify-center">
