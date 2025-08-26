@@ -1,13 +1,7 @@
 import React from "react";
 import postService from "../../api/post-service";
 import BlogPage from "../../components/Blog/BlogPage";
-import { Plus_Jakarta_Sans } from "next/font/google";
 import "dotenv/config";
-
-const plus_jakarta_sans = Plus_Jakarta_Sans({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
 
 async function fetchPostDataBySlug(slug) {
   try {

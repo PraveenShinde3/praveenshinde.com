@@ -1,9 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import formatDate from "../../utils/Blog/dateFormatter";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 const BlogCard = ({ item, index }) => {
   return (
