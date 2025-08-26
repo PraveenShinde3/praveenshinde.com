@@ -8,6 +8,7 @@ export const metadata = {
   title: "Praveen Shinde - Portfolio",
   description:
     "Explore the personal projects, achievements, and expertise of Praveen Shinde in web development and UI design.",
+  metadataBase: new URL("https://praveenshinde.com/"),
   keywords: [
     "Praveen Shinde",
     "Portfolio",

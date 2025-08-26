@@ -3,7 +3,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="px-8 pb-12">
+    <div className="px-8 ">
       <div>
         <p className="font-bold ">Experience</p>
         <div className="flex flex-col gap-2 sm:flex-row sm:gap-4 py-4 text-[0.85rem]">
