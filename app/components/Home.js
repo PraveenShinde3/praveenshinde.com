@@ -3,8 +3,11 @@ import React from "react";
 import Button from "./Button";
 import { LuDownload } from "react-icons/lu";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter, FaJava } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
+import Image from "next/image";
+import { SiNextdotjs, SiSpringboot } from "react-icons/si";
+
 import Link from "next/link";
 
 const RESUME_FILE_NAME = "Praveen-Shinde-CV.pdf";
@@ -58,19 +61,37 @@ const Home = () => {
       <div className="px-8 h-full flex flex-col">
         <header>
           <h1 className="font-bold">Praveen Shinde</h1>
-          <p className="opacity-70">Full-stack Developer & UI Designer</p>
-          <p className="opacity-70">Mumbai, India</p>
+          <p>Full-stack Developer</p>
+          <p>
+            Mumbai, India{" "}
+            <Image
+              src="/indiaflag.svg"
+              alt="India Flag"
+              width={24}
+              height={16}
+              className="inline h-3 opacity-100"
+            />
+          </p>
         </header>
-        <main className="pt-12 sm:w-5/6">
-          <h2 className="font-bold">From Visual Concepts to Functional Code</h2>
+        <main className=" sm:w-11/12">
+          {/* <h2 className="font-bold">From Visual Concepts to Functional Code</h2> */}
           <section className="py-4 flex flex-col gap-2 text-muted-foreground tracking-wide">
             <p>
               Specializing in frontend development with{" "}
-              <TechHighlight>React.js</TechHighlight> and{" "}
-              <TechHighlight>Next.js</TechHighlight>, I am passionate about
-              building dynamic, responsive web applications. Alongside my
-              frontend expertise, I also have experience in backend development
-              with Spring Boot and Java.
+              <TechHighlight>
+                <SiNextdotjs className="inline animate-bounce" />{" "}
+                Next.js(React.js)
+              </TechHighlight>
+              , I am passionate about building dynamic, responsive web
+              applications. Alongside my frontend expertise, I also have
+              experience in backend development with{" "}
+              <TechHighlight>
+                <SiSpringboot className="inline animate-bounce" /> Spring Boot
+              </TechHighlight>{" "}
+              and{" "}
+              <TechHighlight>
+                <FaJava className="inline animate-bounce" /> Java
+              </TechHighlight>{" "}
             </p>
           </section>
           <div className="pt-3 flex gap-4 items-center">
