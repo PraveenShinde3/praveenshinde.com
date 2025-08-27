@@ -77,7 +77,7 @@ const ProjectSection = () => {
     // },
   ];
   return (
-    <div className="px-8 pb-8">
+    <div className="px-8">
       <div>
         <p className="font-bold">Projects</p>
       </div>
