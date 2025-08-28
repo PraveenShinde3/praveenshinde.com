@@ -20,13 +20,15 @@ export async function GET(request) {
 
     const submissionsResponse = await fetch("https://leetcode.com/graphql", {
       method: "POST",
+      cache: "no-store", // prevent fetch cache (Node.js 18+)
       headers: {
         "Content-Type": "application/json",
         "User-Agent":
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
         Referer: "https://leetcode.com",
-        "Cache-Control": "no-cache",
+        "Cache-Control": "no-cache, no-store, must-revalidate",
         Pragma: "no-cache",
+        Expires: "0",
       },
       body: JSON.stringify({
         query: recentSubmissionsQuery,
@@ -75,13 +77,15 @@ export async function GET(request) {
         try {
           const problemResponse = await fetch("https://leetcode.com/graphql", {
             method: "POST",
+            cache: "no-store", // prevent fetch cache (Node.js 18+)
             headers: {
               "Content-Type": "application/json",
               "User-Agent":
                 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
               Referer: "https://leetcode.com",
-              "Cache-Control": "no-cache",
+              "Cache-Control": "no-cache, no-store, must-revalidate",
               Pragma: "no-cache",
+              Expires: "0",
             },
             body: JSON.stringify({
               query: problemQuery,
