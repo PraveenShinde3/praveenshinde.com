@@ -25,6 +25,8 @@ export async function GET(request) {
         "User-Agent":
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
         Referer: "https://leetcode.com",
+        "Cache-Control": "no-cache",
+        Pragma: "no-cache",
       },
       body: JSON.stringify({
         query: recentSubmissionsQuery,
