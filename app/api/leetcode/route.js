@@ -125,9 +125,14 @@ export async function GET(request) {
       }
     }
 
-    return NextResponse.json({
-      recentProblems: uniqueProblems,
-    });
+    const response = NextResponse.json({ recentProblems: uniqueProblems });
+    response.headers.set(
+      "Cache-Control",
+      "no-store, no-cache, must-revalidate, proxy-revalidate"
+    );
+    response.headers.set("Pragma", "no-cache");
+    response.headers.set("Expires", "0");
+    return response;
   } catch (error) {
     console.error(" Error fetching LeetCode data:", error);
     return NextResponse.json(
