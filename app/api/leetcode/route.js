@@ -1,48 +1,72 @@
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 import { NextResponse } from "next/server";
 
-export async function GET(request) {
-  const username = "shindepraveen002";
+const LEETCODE_GRAPHQL_URL = "https://leetcode.com/graphql";
+const USERNAME = "shindepraveen002";
+const SUBMISSION_LIMIT = 20;
+const ACCEPTED_LIMIT = 10;
 
-  try {
-    // Recent submissions query
-    const recentSubmissionsQuery = `
-      query getRecentSubmissions($username: String!, $limit: Int!) {
-        recentSubmissionList(username: $username, limit: $limit) {
-          id
-          title
-          titleSlug
-          timestamp
-          statusDisplay
-          lang
-        }
-      }
-    `;
+const HEADERS = {
+  "Content-Type": "application/json",
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+  Referer: "https://leetcode.com",
+  "Cache-Control": "no-cache, no-store, must-revalidate",
+  Pragma: "no-cache",
+  Expires: "0",
+};
 
-    const submissionsResponse = await fetch("https://leetcode.com/graphql", {
-      method: "POST",
-      cache: "no-store", // prevent fetch cache (Node.js 18+)
-      headers: {
-        "Content-Type": "application/json",
-        "User-Agent":
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-        Referer: "https://leetcode.com",
-        "Cache-Control": "no-cache, no-store, must-revalidate",
-        Pragma: "no-cache",
-        Expires: "0",
-      },
-      body: JSON.stringify({
-        query: recentSubmissionsQuery,
-        variables: { username, limit: 20 },
-      }),
-    });
-
-    if (!submissionsResponse.ok) {
-      throw new Error(
-        `Submissions API request failed: ${submissionsResponse.status}`
-      );
+const recentSubmissionsQuery = `
+  query getRecentSubmissions($username: String!, $limit: Int!) {
+    recentSubmissionList(username: $username, limit: $limit) {
+      id
+      title
+      titleSlug
+      timestamp
+      statusDisplay
+      lang
     }
+  }
+`;
 
-    const submissionsData = await submissionsResponse.json();
+const problemDetailsQuery = `
+  query getProblemDetails($titleSlug: String!) {
+    question(titleSlug: $titleSlug) {
+      questionId
+      questionFrontendId
+      title
+      titleSlug
+      difficulty
+      topicTags {
+        name
+        slug
+      }
+    }
+  }
+`;
+
+async function fetchGraphQL(query, variables) {
+  const response = await fetch(LEETCODE_GRAPHQL_URL, {
+    method: "POST",
+    cache: "no-store",
+    headers: HEADERS,
+    body: JSON.stringify({ query, variables }),
+    next: { revalidate: 0 },
+  });
+  if (!response.ok) {
+    throw new Error(`GraphQL request failed: ${response.status}`);
+  }
+  return response.json();
+}
+
+export async function GET() {
+  try {
+    // Fetch recent submissions
+    const submissionsData = await fetchGraphQL(recentSubmissionsQuery, {
+      username: USERNAME,
+      limit: SUBMISSION_LIMIT,
+    });
 
     if (submissionsData.errors) {
       throw new Error(
@@ -50,50 +74,18 @@ export async function GET(request) {
       );
     }
 
-    // Keep only accepted ones
-    const recentAccepted = submissionsData.data.recentSubmissionList
+    // Filter accepted submissions
+    const accepted = submissionsData.data.recentSubmissionList
       .filter((sub) => sub.statusDisplay === "Accepted")
-      .slice(0, 10);
+      .slice(0, ACCEPTED_LIMIT);
 
-    // Fetch problem details
+    // Fetch problem details for each accepted submission
     const problemDetails = await Promise.all(
-      recentAccepted.map(async (submission) => {
-        const problemQuery = `
-          query getProblemDetails($titleSlug: String!) {
-            question(titleSlug: $titleSlug) {
-              questionId
-              questionFrontendId
-              title
-              titleSlug
-              difficulty
-              topicTags {
-                name
-                slug
-              }
-            }
-          }
-        `;
-
+      accepted.map(async (submission) => {
         try {
-          const problemResponse = await fetch("https://leetcode.com/graphql", {
-            method: "POST",
-            cache: "no-store", // prevent fetch cache (Node.js 18+)
-            headers: {
-              "Content-Type": "application/json",
-              "User-Agent":
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-              Referer: "https://leetcode.com",
-              "Cache-Control": "no-cache, no-store, must-revalidate",
-              Pragma: "no-cache",
-              Expires: "0",
-            },
-            body: JSON.stringify({
-              query: problemQuery,
-              variables: { titleSlug: submission.titleSlug },
-            }),
+          const problemData = await fetchGraphQL(problemDetailsQuery, {
+            titleSlug: submission.titleSlug,
           });
-
-          const problemData = await problemResponse.json();
           return {
             ...submission,
             problem: problemData.data.question,
@@ -116,6 +108,8 @@ export async function GET(request) {
         }
       })
     );
+
+    // Remove duplicate problems by title
     const uniqueProblems = [];
     const seenTitles = new Set();
     for (const detail of problemDetails) {
@@ -134,7 +128,7 @@ export async function GET(request) {
     response.headers.set("Expires", "0");
     return response;
   } catch (error) {
-    console.error(" Error fetching LeetCode data:", error);
+    console.error("Error fetching LeetCode data:", error);
     return NextResponse.json(
       {
         error: "Failed to fetch recent problems",
