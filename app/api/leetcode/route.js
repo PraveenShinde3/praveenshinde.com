@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 import { NextResponse } from "next/server";
 
 export async function GET(request) {
@@ -34,6 +36,7 @@ export async function GET(request) {
         query: recentSubmissionsQuery,
         variables: { username, limit: 20 },
       }),
+      next: { revalidate: 0 },
     });
 
     if (!submissionsResponse.ok) {
