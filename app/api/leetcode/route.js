@@ -52,7 +52,7 @@ async function fetchGraphQL(query, variables) {
     cache: "no-store",
     headers: HEADERS,
     body: JSON.stringify({ query, variables }),
-    next: { revalidate: 0 },
+    // next: { revalidate: 0 },
   });
   if (!response.ok) {
     throw new Error(`GraphQL request failed: ${response.status}`);
