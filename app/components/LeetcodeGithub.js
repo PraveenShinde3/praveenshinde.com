@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { BsGithub } from "react-icons/bs";
 import { LuLoader } from "react-icons/lu";
 import { SiLeetcode } from "react-icons/si";
-import { BsCode } from "react-icons/bs";
 
 const LEETCODE_API = "/api/leetcode/";
 const GITHUB_API = "https://api.github.com/users/PraveenShinde3/events/public";
