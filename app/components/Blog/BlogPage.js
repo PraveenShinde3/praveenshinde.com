@@ -46,7 +46,7 @@ const BlogPage = ({ source, data }) => {
         </div>
         <div className="h-[1px] w-full bg-accent"></div>
       </div>
-      <MDXRemote source={source} options={options} />
+      <MDXRemote source={source} options={options} components={components} />
 
       <div className="py-4">
         <p className=" py-1  w-fit bg-accent px-4 rounded-full">
